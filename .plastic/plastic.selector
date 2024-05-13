@@ -1,0 +1,4 @@
+repository "AR_Try1@glebbb12@cloud"
+  path "/"
+    br "/main"
+    co "/main"
