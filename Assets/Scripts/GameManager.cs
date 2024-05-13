@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
         var rand = new System.Random();
         int i = rand.Next(planes.Length-1);
         AlonsoMovement.FirstARP = planes[i];
-        Instantiate(prefabTOspawn, planes[i].transform.position, quat);
+        Instantiate(prefabTOspawn, planes[i].transform.position + planes[i].transform.lossyScale/2 , quat);
     }
 }

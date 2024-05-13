@@ -581,6 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button_Text: {fileID: 622176155}
   Seconds_For_Timer: 3
+  light: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
