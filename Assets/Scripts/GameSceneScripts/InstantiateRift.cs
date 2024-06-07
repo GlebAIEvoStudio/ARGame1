@@ -14,6 +14,7 @@ public class InstantiateRift : MonoBehaviour
     public GameObject Rift;
     private GameObject Camera;
     private RaycastHit hit;
+    [SerializeField] private int RandomRangeOfRiftSpawn;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class InstantiateRift : MonoBehaviour
         var rand = new System.Random();       
         GameObject[] planes = GameObject.FindGameObjectsWithTag("ARPlane");
         int i = rand.Next(planes.Length-1);
-        Vector3 RayPos = new Vector3(GetRandomFloat(0,3), 3, GetRandomFloat(0,3));
+        Vector3 RayPos = new Vector3(GetRandomFloat(0,RandomRangeOfRiftSpawn), 3, GetRandomFloat(0,RandomRangeOfRiftSpawn));
         while(true)
         {
             if(CheckTheGround(RayPos+planes[i].transform.position))
@@ -42,7 +43,7 @@ public class InstantiateRift : MonoBehaviour
                 Instantiate(Rift, hit.point + Rift.transform.lossyScale/2, Rift.transform.rotation);
                 break;
             }
-            RayPos = new Vector3(GetRandomFloat(0,3), 3, GetRandomFloat(0,3));
+            RayPos = new Vector3(GetRandomFloat(0,RandomRangeOfRiftSpawn), 3, GetRandomFloat(0,RandomRangeOfRiftSpawn));
         }
     }
 

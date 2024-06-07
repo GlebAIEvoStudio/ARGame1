@@ -871,6 +871,7 @@ MonoBehaviour:
   Debug_Text: {fileID: 2057253151}
   Button_Text: {fileID: 1390407345}
   Rift: {fileID: 6755204240508054033, guid: d1e4e6381cc8cdf489a2b917aacde4c0, type: 3}
+  RandomRangeOfRiftSpawn: 4
 --- !u!1 &1706144768
 GameObject:
   m_ObjectHideFlags: 0
